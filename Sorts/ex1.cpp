@@ -54,44 +54,48 @@ void timeSort(int len,
     file.close();
 }
 int main(){   
-    prepare1("BS");
-    prepare1("HS");
-    prepare1("CS");
-    prepare1("ShS");
+    // prepare1("BS");
+    // prepare1("HS");
+    // prepare1("CS");
+    // prepare1("ShS");
+    srand(time(0));
     prepare2("QS");
-    prepare2("HS2");
-    prepare2("MS");
-    for (int i=100;i<10000;i+=100){
-        timeSortBasic(i, BubbleSort, "BS");
-        timeSortBasic(i, HeapSort, "HS");
-        timeSortBasic(i, CountingSort, "CS");
-        timeSortBasic(i, ShellSort, "ShS");
+    for (int k=99999;k<=100001;k++){
+        timeSort(k, AShape, "ASHAPE",QuickSort, "QS");
+        timeSort(k, VShape, "VSHAPE",QuickSort, "QS");   
     }
+    // prepare2("MS");
+    // for (int i=100;i<10000;i+=100){
+    //     timeSortBasic(i, BubbleSort, "BS");
+    //     timeSortBasic(i, HeapSort, "HS");
+    //     timeSortBasic(i, CountingSort, "CS");
+    //     timeSortBasic(i, ShellSort, "ShS");
+    // }
 
-    for (int i=100;i<100000;i+=100){
-        timeSort(i, uniform, "UNIFORM", QuickSort, "QS");
-        timeSort(i, constant,"CONSTANT",QuickSort,"QS");
-        timeSort(i, ascending, "ASCENDING",QuickSort, "QS");
-        timeSort(i, descending,"DESCENDING",QuickSort, "QS");
-        timeSort(i, AShape, "ASHAPE",QuickSort, "QS");
-        timeSort(i, VShape, "VSHAPE",QuickSort, "QS");
+    // for (int i=100;i<100000;i+=100){
+    //     timeSort(i, uniform, "UNIFORM", QuickSort, "QS");
+    //     timeSort(i, constant,"CONSTANT",QuickSort,"QS");
+    //     timeSort(i, ascending, "ASCENDING",QuickSort, "QS");
+    //     timeSort(i, descending,"DESCENDING",QuickSort, "QS");
+    //     timeSort(i, AShape, "ASHAPE",QuickSort, "QS");
+    //     timeSort(i, VShape, "VSHAPE",QuickSort, "QS");
 
 
-        timeSort(i, uniform, "UNIFORM", HeapSort, "HS2");
-        timeSort(i, constant,"CONSTANT",HeapSort,"HS2");
-        timeSort(i, ascending, "ASCENDING",HeapSort, "HS2");
-        timeSort(i, descending,"DESCENDING",HeapSort, "HS2");
-        timeSort(i, AShape, "ASHAPE",HeapSort, "HS2");
-        timeSort(i, VShape, "VSHAPE",HeapSort, "HS2");
+    //     timeSort(i, uniform, "UNIFORM", HeapSort, "HS2");
+    //     timeSort(i, constant,"CONSTANT",HeapSort,"HS2");
+    //     timeSort(i, ascending, "ASCENDING",HeapSort, "HS2");
+    //     timeSort(i, descending,"DESCENDING",HeapSort, "HS2");
+    //     timeSort(i, AShape, "ASHAPE",HeapSort, "HS2");
+    //     timeSort(i, VShape, "VSHAPE",HeapSort, "HS2");
 
 
-        timeSort(i, uniform, "UNIFORM", MergeSort, "MS");
-        timeSort(i, constant,"CONSTANT",MergeSort,"MS");
-        timeSort(i, ascending, "ASCENDING",MergeSort, "MS");
-        timeSort(i, descending,"DESCENDING",MergeSort, "MS");
-        timeSort(i, AShape, "ASHAPE",MergeSort, "MS");
-        timeSort(i, VShape, "VSHAPE",MergeSort, "MS");
-    }
+    //     timeSort(i, uniform, "UNIFORM", MergeSort, "MS");
+    //     timeSort(i, constant,"CONSTANT",MergeSort,"MS");
+    //     timeSort(i, ascending, "ASCENDING",MergeSort, "MS");
+    //     timeSort(i, descending,"DESCENDING",MergeSort, "MS");
+    //     timeSort(i, AShape, "ASHAPE",MergeSort, "MS");
+    //     timeSort(i, VShape, "VSHAPE",MergeSort, "MS");
+    // }
     return 0;   
 }
 
