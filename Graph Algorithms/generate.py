@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 
-n = 10
+n = 1000
 size = int(n*(n-1)/2)
 np.zeros(n*n)
 density = int(np.floor(size*0.7))
