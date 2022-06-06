@@ -25,9 +25,14 @@ def get_matrix(number_of_vertices):
     return matrix
 
 step=100
-
+filename = ".txt"
+f = open(filename, 'a')
+m=get_matrix(10)
+for i in range(10):
+    f.write(m[i] + "\n")
+f.close()
 for x in range(10):
-    filename = "output/out_%s.txt" % (x)
+    filename = "output/ham_%s.txt" % (x)
     f = open(filename, 'a')
     m=get_matrix((x+1)*step)
     for i in range((x+1)*step):

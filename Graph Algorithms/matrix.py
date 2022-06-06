@@ -13,7 +13,7 @@ def get_matrix(number_of_vertices):
 
 step=100
 
-for x in range(11):
+for x in range(15):
     filename = "output/out_%s.txt" % (x)
     f = open(filename, 'a')
     m=get_matrix((x+1)*step)

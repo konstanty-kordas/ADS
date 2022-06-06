@@ -58,12 +58,27 @@ int main(){
     // prepare1("HS");
     // prepare1("CS");
     // prepare1("ShS");
-    srand(time(0));
-    prepare2("QS");
-    for (int k=99999;k<=100001;k++){
-        timeSort(k, AShape, "ASHAPE",QuickSort, "QS");
-        timeSort(k, VShape, "VSHAPE",QuickSort, "QS");   
+    int* q = (int*)malloc(sizeof(int) * 100);
+    AShape(100,q);
+    for (int i=0;i<100;i++){
+        std::cout<<q[i]<<'\t';
     }
+    std::cout<<std::endl<<"VSHAPE"<<std::endl<<std::endl<<std::endl;
+
+    int* p = (int*)malloc(sizeof(int) * 100);
+    VShape(100,p);
+    for (int i=0;i<100;i++){
+        std::cout<<p[i]<<'\t';
+    }
+    timeSort(100, AShape, "ASHAPE",QuickSort, "QS");
+    timeSort(100, VShape, "VSHAPE",QuickSort, "QS");   
+    // for (int k=99999;k<=100001;k++){
+    //     timeSort(k, AShape, "ASHAPE",QuickSort, "QS");
+    //     timeSort(k, VShape, "VSHAPE",QuickSort, "QS");   
+    // }
+    // srand(time(0));
+    // prepare2("QS");
+
     // prepare2("MS");
     // for (int i=100;i<10000;i+=100){
     //     timeSortBasic(i, BubbleSort, "BS");
@@ -75,8 +90,7 @@ int main(){
     // for (int i=100;i<100000;i+=100){
     //     timeSort(i, uniform, "UNIFORM", QuickSort, "QS");
     //     timeSort(i, constant,"CONSTANT",QuickSort,"QS");
-    //     timeSort(i, ascending, "ASCENDING",QuickSort, "QS");
-    //     timeSort(i, descending,"DESCENDING",QuickSort, "QS");
+
     //     timeSort(i, AShape, "ASHAPE",QuickSort, "QS");
     //     timeSort(i, VShape, "VSHAPE",QuickSort, "QS");
 
